@@ -274,7 +274,7 @@ iptables -t nat -I POSTROUTING -s "$XAUTH_NET" -o eth+ -m policy --dir out --pol
 iptables -t nat -I POSTROUTING -s "$L2TP_NET" -o eth+ -j MASQUERADE
 
 # Update file attributes
-chmod 600 /etc/ipsec.secrets /etc/ppp/chap-secrets /etc/ipsec.d/passwd
+chmod 600 /etc/ipsec.secrets /etc/ipsec.d/passwd
 
 cat <<EOF
 
