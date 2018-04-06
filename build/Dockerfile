@@ -29,7 +29,7 @@ RUN apt-get -yqq update \
     && make -s base \
     && make -s install-base \
     && cd /opt/src \
-    && rm -rf "/opt/src/libreswan-${SWAN_VER}" \
+    && rm -rf "/opt/src/libreswan-${SWAN_VER}" 
 
 # gpg keys listed at https://github.com/nodejs/node#release-team
 RUN set -ex \
