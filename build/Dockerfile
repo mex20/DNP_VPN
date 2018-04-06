@@ -20,7 +20,7 @@ RUN apt-get -yqq update \
          libcap-ng-dev libcap-ng-utils libselinux1-dev \
          libcurl4-nss-dev flex bison gcc make gnupg \
 	     libcurl3-nss-dev libldns-dev \
-	     libunbound-dev xmlto \
+	     libunbound-dev xmlto dirmngr \
 	     libsystemd-dev \
     && wget -t 3 -T 30 -nv -O "libreswan.tar.gz" "https://github.com/libreswan/libreswan/archive/v${SWAN_VER}.tar.gz" \
     || wget -t 3 -T 30 -nv -O "libreswan.tar.gz" "https://download.libreswan.org/libreswan-${SWAN_VER}.tar.gz" \
