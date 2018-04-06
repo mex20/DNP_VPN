@@ -50,7 +50,7 @@ COPY VPN.mobileconfig.tpl /opt/src/
 COPY ./adduser.sh /usr/sbin/adduser.sh
 COPY ./lsusers.sh /usr/sbin/lsusers.sh
 COPY ./rmuser.sh /usr/sbin/rmuser.sh
-RUN chmod 755 /run.sh /adduser.sh /lsusers.sh /rmuser.sh
+RUN chmod 755 /usr/sbin/run.sh /usr/sbin/adduser.sh /usr/sbin/lsusers.sh /usr/sbin/rmuser.sh
 
 
 EXPOSE 500/udp 4500/udp
