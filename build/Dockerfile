@@ -10,7 +10,7 @@ RUN apt-get -yqq update \
        apt-get -yqq --no-install-recommends install \
          wget dnsutils openssl ca-certificates kmod \
          iproute gawk grep sed net-tools iptables \
-         bsdmainutils libcurl3-nss curl xz \
+         bsdmainutils libcurl3-nss curl xz-utils \
          libnss3-tools libevent-dev libcap-ng0 xl2tpd \
          libnss3-dev libnspr4-dev pkg-config libpam0g-dev \
          libcap-ng-dev libcap-ng-utils libselinux1-dev \
@@ -73,7 +73,7 @@ RUN      apt-get -yqq remove \
          libnss3-dev libnspr4-dev pkg-config libpam0g-dev \
          libcap-ng-dev libcap-ng-utils libselinux1-dev \
          libcurl4-nss-dev flex bison gcc make gnupg dirmngr \
-         perl-modules perl curl xz \
+         perl-modules perl curl xz-utils \
     && apt-get -yqq autoremove \
     && apt-get -y clean \
     && rm -rf /var/lib/apt/lists/*
