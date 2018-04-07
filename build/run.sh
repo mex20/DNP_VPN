@@ -124,8 +124,8 @@ L2TP_LOCAL=${VPN_L2TP_LOCAL:-'192.168.42.1'}
 L2TP_POOL=${VPN_L2TP_POOL:-'192.168.42.10-192.168.42.250'}
 XAUTH_NET=${VPN_XAUTH_NET:-'192.168.43.0/24'}
 XAUTH_POOL=${VPN_XAUTH_POOL:-'192.168.43.10-192.168.43.250'}
-DNS_SRV1=${VPN_DNS_SRV1:-'8.8.8.8'}
-DNS_SRV2=${VPN_DNS_SRV2:-'8.8.4.4'}
+DNS_SRV1=${VPN_DNS_SRV1:-'1.1.1.1'}
+DNS_SRV2=${VPN_DNS_SRV2:-'1.0.0.1'}
 
 # Create IPsec (Libreswan) config
 cat > /etc/ipsec.conf <<EOF
@@ -165,7 +165,7 @@ conn l2tp-psk
 conn xauth-psk
   auto=add
   leftsubnet=0.0.0.0/0
-  rightaddresspool=$XAUTH_POOL
+ # rightaddresspool=$XAUTH_POOL
   modecfgdns="$DNS_SRV1, $DNS_SRV2"
   leftxauthserver=yes
   rightxauthclient=yes
