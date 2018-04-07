@@ -1,4 +1,4 @@
-FROM debian:stretch
+FROM buildpack-deps:stretch
 
 ENV SWAN_VER 3.23
 ENV NODE_VERSION 8.11.1
